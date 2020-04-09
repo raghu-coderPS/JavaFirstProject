@@ -1,12 +1,12 @@
 package com.sapient.week1;
 
-public class CheckEven {
-   public static boolean Check(int n) {
-      // if number is divisible by
-      // 2 then number is even
-      if(n % 2 == 0)
-          return true;
+public class Application {
 
-      // else the number is odd
-      return false;
-   }
+public Application() {
+
+}
+	 public int checkEven(int num) {
+		 if(num%2 == 0) return 1;
+		 else return 0;
+	    }
+}
