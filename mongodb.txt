@@ -1,0 +1,19 @@
+db.Employees.find().pretty()
+
+db.Employees.find({},{fname: 1, _id: 0, id: 1})
+
+db.Employees.find({},{id: 0}).pretty()
+
+db.Employees.find().pretty().limit(5)
+
+db.Employees.find().skip(5).limit(5).pretty()
+
+db.Employees.find({city: "Gurgaon"})
+
+db.Employees.find({"salary.jan":{$lt: 20000}})
+
+db.Employees.find({$and: [{"salary.jan":{$lt: 20000}},{city: "Gurgaon"}]})
+
+db.Employees.aggregate({$group: {_id: '',"Amount": { $sum: '$salary.jan' }}}, {$project: {_id: 0,"TotalAmount": '$Amount'}});
+
+db.Employees.find({city: "Gurgaon"}).count()
