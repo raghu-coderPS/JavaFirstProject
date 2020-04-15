@@ -1,0 +1,32 @@
+SELECT modulecode FROM MODULES WHERE duration <= 6;
+
+SELECT batches.batchcode, batches.trainerid, batches.coursecode, batches.startdate, batches.capacity, batches.batchstrength FROM trainers FULL JOIN batches ON trainers.trainerid = batches.trainerid WHERE trainers.trainername = 'KRISHNAN';
+
+SELECT MODULES.modulename FROM courseandmodules FULL JOIN MODULES ON courseandmodules.modulecode = MODULES.modulecode WHERE courseandmodules.coursecode =100;
+
+SELECT MODULES.modulename,courseandmodules.coursecode FROM courseandmodules FULL JOIN MODULES ON courseandmodules.modulecode = MODULES.modulecode WHERE courseandmodules.coursecode =100;
+
+SELECT COUNT(MODULES.modulename) FROM courseandmodules FULL JOIN MODULES ON courseandmodules.modulecode = MODULES.modulecode WHERE courseandmodules.coursecode =100;
+ 
+ 6th skip
+ 
+ SELECT title, fees FROM courses WHERE fees = (SELECT max(fees) FROM courses);
+ 
+ SELECT * FROM students WHERE batchcode = 3001;
+ 
+ SELECT * FROM students WHERE place = 'CHENNAI';
+ 
+ SELECT COUNT(modulecode) FROM MODULES WHERE duration < 6;
+ 
+ SELECT batches.batchcode, courses.title, batches.startdate FROM batches FULL JOIN courses ON batches.coursecode = courses.coursecode WHERE batches.startdate BETWEEN '2012-05-01' AND '2012-05-31';
+ 
+ SELECT courses.coursecode, courses.title, courses.fees, batches.startdate FROM batches FULL JOIN courses ON batches.coursecode = courses.coursecode WHERE EXTRACT (YEAR FROM batches.startdate) != 2012 AND EXTRACT (MONTH FROM batches.startdate) != 01;
+ 
+ SELECT MODULES.modulename FROM courseandmodules FULL JOIN MODULES ON courseandmodules.modulecode = MODULES.modulecode WHERE courseandmodules.coursecode = (SELECT coursecode FROM courses WHERE title = 'Oracle DBA');
+ 
+ SELECT students.* FROM batches FULL JOIN students ON batches.batchcode = students.batchcode WHERE EXTRACT (YEAR FROM batches.startdate) = 2012 AND students.place = 'CHENNAI';
+ 
+ 
+ SELECT students.studentid, students.studentname FROM batches FULL JOIN students ON batches.batchcode = students.batchcode WHERE batches.coursecode = 200;
+ 
+
