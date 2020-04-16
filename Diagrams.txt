@@ -1,0 +1,10 @@
+All the diagrams given depicts the order management system.
+
+The UML usecase diagram depicts that the customer sends an order request then the type of order will be checked i.e; if it is normal order or 
+special order also the order is provided with date and location.Then the order is confirmed dispatched and closed.
+
+The UML class diagram contains the main classes of Customer,Order,Special Order,Normal Order.There is one super class Order and two sub classes 
+Special order and normal Order.
+
+The UML sequence diagram contains the actor which is customer in this case.send order and confirm are the messages and the Dispatch() is a self message.
+There is a reply message return.
