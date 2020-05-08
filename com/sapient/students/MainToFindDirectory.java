@@ -2,7 +2,7 @@ package com.sapient.students;
 
 import java.io.File;
 
-public class Main {
+public class MainToFindDirectory {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
