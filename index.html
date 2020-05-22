@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Calculator Theme Page Using Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="global.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+ .jumbotron {
+  background-image: url('keychain.jpg');
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+background-size: cover;
+color: #ffffff;
+padding: 150px 25px;
+} 
+.navbar {
+  margin-bottom: 0;
+  background-color: #f4511e;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+  color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: #f4511e !important;
+  background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+footer .glyphicon {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #f4511e;
+}
+#panel {
+  /* calculator er display er jonne ai id kora hoie */
+  text-align: right;
+  width: 274px;
+  height: 80px;
+  font-size: 26px;
+  background-color: white;
+}
+
+#panel:hover {
+  /* calculator er display er jonne ai id kora hoie */
+  cursor: col-resize;
+}
+</style>
+<body>
+  <div class="jumbotron text-center">
+    <h1 id="home">Sample Web Page</h1>
+    <p>Solve your problems</p>
+  </div>
+  
+  <div class="container-fluid">
+  <h2 id="login">Login here</h2>
+   <form id="frm1">
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="fname">First name:</label>
+    <input type="text" class="form-control" id="fname">
+  </div>
+   <input type="button" onclick="myFunction()" value="Submit">
+    </form> 
+</div>
+<div class="container-fluid">
+<h1 id="calc">Simple Calculator</h1>
+	<table border="2"> 
+		<tr> 
+			<td colspan="3"><input type="text" id="result"/></td> 
+			<td><input class="form-group btn btn-default bttn-c" type="button" value="c" onclick="clr()"/> </td> 
+		</tr> 
+		<tr> 
+			<td><input class="form-group btn btn-default bttn" type="button" value="1" onclick="dis('1')"/> </td> 
+			<td><input class="form-group btn btn-default bttn" type="button" value="2" onclick="dis('2')"/> </td> 
+			<td><input class="form-group btn btn-default bttn" type="button" value="3" onclick="dis('3')"/> </td> 
+			<td><input class="form-group btn btn-danger bttn" type="button" value="/" onclick="dis('/')"/> </td> 
+		</tr> 
+		<tr> 
+			<td><input class="form-group btn btn-default bttn" type="button" value="4" onclick="dis('4')"/> </td> 
+			<td><input class="form-group btn btn-default bttn" type="button" value="5" onclick="dis('5')"/> </td> 
+			<td><input class="form-group btn btn-default bttn" type="button" value="6" onclick="dis('6')"/> </td> 
+			<td><input class="form-group btn btn-danger bttn" type="button" value="-" onclick="dis('-')"/> </td> 
+		</tr> 
+		<tr> 
+			<td><input class="form-group btn btn-default bttn" type="button" value="7" onclick="dis('7')"/> </td> 
+			<td><input class="form-group btn btn-default bttn" type="button" value="8" onclick="dis('8')"/> </td> 
+			<td><input class="form-group btn btn-default bttn" type="button" value="9" onclick="dis('9')"/> </td> 
+			<td><input class="form-group btn btn-danger bttn" type="button" value="+" onclick="dis('+')"/> </td> 
+		</tr> 
+		<tr> 
+			<td><input class="form-group btn btn-default bttn" type="button" value="." onclick="dis('.')"/> </td> 
+			<td><input class="form-group btn btn-default bttn" type="button" value="0" onclick="dis('0')"/> </td> 
+			<td><input class="form-group btn btn-danger bttn" type="button" value="=" onclick="solve()"/> </td> 
+			<td><input class="form-group btn btn-danger bttn" type="button" value="*" onclick="dis('*')"/> </td> 
+		</tr> 
+  </table> 
+</div>
+ <div class="table-responsive container-fluid">
+ <h2 id="reg">Login register Table</h2>
+  <table id="table" class="table">
+  <tr>
+    <td>something@gmail.com</td>
+    <td>younname</td>
+  <tr>
+  </table>
+</div> 
+ <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container1">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Web</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#calc">Calculator</a></li>
+        <li><a href="#reg">Register</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- my own JS -->
+    <script src="calculator.js"></script>
+  
+</body>
+<footer class="container-fluid text-center">
+  <a href="#home" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Sample Theme Made By <a href="https://www.linkedin.com/in/kanagarla-raghuram-769676132" title="Visit w3schools">Raghuram K</a></p>
+</footer>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

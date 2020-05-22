@@ -1,0 +1,38 @@
+
+ .form-container{
+  padding: 30px;
+  opacity: 100%;
+}
+.title{ 
+  margin-bottom: 10px; 
+  text-align:center;  
+  color:blue; 
+  width: 210px;
+  border: solid black 2px; 
+} 
+
+#result{ 
+      border: solid black 2px; 
+      color:white;
+      background-color: green; 
+      text-align: right;
+  width:100% 
+} 
+
+.bttn{
+margin-bottom: 8px;
+margin-left: 5px;
+width: 59px;
+height: 45px;
+font-size: 22px;
+color: black;
+}
+.bttn-c{
+margin-bottom: 8px;
+margin-left: 5px;
+width: 59px;
+height: 45px;
+font-size: 22px;
+color:white;
+background-color: black;
+}
