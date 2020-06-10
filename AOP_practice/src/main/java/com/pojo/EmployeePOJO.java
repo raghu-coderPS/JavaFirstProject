@@ -1,4 +1,4 @@
-package com.pojo;
+    package com.pojo;
 
 public class EmployeePOJO {
 
@@ -7,6 +7,7 @@ public class EmployeePOJO {
    private String city;
 
 public EmployeePOJO() {
+
 
 }
 
@@ -41,3 +42,5 @@ public String toString() {
 }
 
 }
+
+    

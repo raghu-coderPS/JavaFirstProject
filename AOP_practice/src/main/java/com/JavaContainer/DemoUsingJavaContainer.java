@@ -7,16 +7,17 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import com.pojo.EmployeePOJO;
 
-public class Demonstration {
+public class DemoUsingJavaContainer{
 
 	public static void main(String[] args) {
 		   ApplicationContext context1 = new AnnotationConfigApplicationContext(JavaContainer.class);
 
 		   Scanner scan = new Scanner(System.in);
+		   System.out.println("Enter id:");
 			int id = scan.nextInt();
-			System.out.println(id);
-	        if(id<3) {
-			EmployeePOJO ob1 = context1.getBean("e"+id,EmployeePOJO.class);
+
+	        if(id<4) {
+			EmployeePOJO ob1 = context1.getBean("emp"+id,EmployeePOJO.class);
 			System.out.println(ob1.toString());
 			}
 	        else
@@ -27,3 +28,5 @@ public class Demonstration {
 	}
 
 }
+
+

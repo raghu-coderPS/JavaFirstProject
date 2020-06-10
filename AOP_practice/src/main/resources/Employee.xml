@@ -14,14 +14,19 @@
         
         
         
-	<bean id = "e1" class = "com.pojo.EmployeePOJO">
+	<bean id = "emp1" class = "com.pojo.EmployeePOJO">
 		<constructor-arg   value = "1"></constructor-arg>
-		<constructor-arg   value = "Sai"></constructor-arg>
+		<constructor-arg   value = "Raghuram"></constructor-arg>
 		<constructor-arg   value = "Banglore"></constructor-arg>	
 	</bean>
-        <bean id = "e2" class = "com.pojo.EmployeePOJO">
+        <bean id = "emp2" class = "com.pojo.EmployeePOJO">
 		<constructor-arg   value = "2"></constructor-arg>
-		<constructor-arg   value = "Sampu"></constructor-arg>
+		<constructor-arg   value = "Leela"></constructor-arg>
 		<constructor-arg   value = "Chennai"></constructor-arg>	
+	</bean>
+	 <bean id = "emp3" class = "com.pojo.EmployeePOJO">
+		<constructor-arg   value = "3"></constructor-arg>
+		<constructor-arg   value = "Satya"></constructor-arg>
+		<constructor-arg   value = "Vijayawada"></constructor-arg>	
 	</bean>
  </beans>

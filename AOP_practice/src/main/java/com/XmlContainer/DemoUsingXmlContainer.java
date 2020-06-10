@@ -1,25 +1,24 @@
-package com.demo;
+package com.XmlContainer;
 
 import java.util.Scanner;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.JavaContainer.JavaContainer;
 import com.pojo.EmployeePOJO;
 
 
-public class Demo {
+public class DemoUsingXmlContainer {
 
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("Employee.xml");
 
 		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter id:");
 		int id = scan.nextInt();
-		System.out.println(id);
 
-		if(id<3) {
-		EmployeePOJO ob = (EmployeePOJO) context.getBean("e"+id);
+		if(id<4) {
+		EmployeePOJO ob = (EmployeePOJO) context.getBean("emp"+id);
 		System.out.println(ob.toString());
 		}
 		else
@@ -34,3 +33,5 @@ public class Demo {
 
 
 }
+
+    
