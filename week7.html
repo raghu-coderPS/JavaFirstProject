@@ -128,12 +128,8 @@
     			 }
     </script>
     <script>
-        // scroll down for ES6 features. 
-    
-        // using regular methods.
     
         function tableFromJson() {
-		// the json data. (you can change the values for output.)
         var Employee = [
             {'Employee ID': '1', 'Employee Name': 'Raghuram',
                 'Employee City': 'Hyderabad'
@@ -146,8 +142,6 @@
             }
         ]
 
-        // Extract value from table header. 
-        // ('Book ID', 'Book Name', 'Category' and 'Price')
         var col = [];
         for (var i = 0; i < Employee.length; i++) {
             for (var key in Employee[i]) {
@@ -181,7 +175,6 @@
             
         }
 
-        // Now, add the newly created table with json data, to a container.
         var divShowData = document.getElementById('showData');
         divShowData.innerHTML = "";
         divShowData.appendChild(table);
@@ -189,7 +182,7 @@
     }
     
     function tableFromJson1() {
-		// the json data. (you can change the values for output.)
+		
         var Employee = [
             {'Employee ID': '1', 'Employee Name': 'Raghuram',
                 'Employee City': 'Hyderabad'
@@ -202,8 +195,6 @@
             }
         ]
 
-        // Extract value from table header. 
-        // ('Book ID', 'Book Name', 'Category' and 'Price')
         var col = [];
         for (var i = 0; i < Employee.length; i++) {
             for (var key in Employee[i]) {
@@ -213,7 +204,6 @@
             }
         }
 
-        // Create a table.
         var table = document.createElement("table");
 
         // Create table header row using the extracted headers above.
@@ -258,23 +248,16 @@
     					return false;   
            }
            
-            
-        
-
-        // Now, add the newly created table with json data, to a container.
         var divShowData = document.getElementById('showData1');
         divShowData.innerHTML = "";
         divShowData.appendChild(table);
         
     }
-    
-        
-   
-    </script>
+ </script>
     </head>
     <body>
     	<br>
-    	<h1> Basic Calculator Using Radio Button </h1>
+    	<h1 id="home"> Basic Calculator Using Radio Button </h1>
     		<br>
     <form action="" method="POST">
     		 <label for="first_value">First Value</label>
@@ -284,18 +267,11 @@
     		<input type="text" name="no_2" id="no2" size="5">
     	 <br><br>
     <label class="custom-control-label" >Operators</label>
-
                 <div class="custom-control custom-radio custom-control-inline">
                   <input type="radio" class="custom-control-input" id="defaultInline1" name="math" onclick="reset_msg();" />Addition
-                  
-                
                   <input type="radio" class="custom-control-input" id="defaultInline2" name="math" onclick="reset_msg();" />Substraction
-                  
-
                   <input type="radio" class="custom-control-input" id="defaultInline3" name="math" onclick="reset_msg();" />Multiplication
-
-                  <input type="radio" class="custom-control-input" id="defaultInline3" name="math" onclick="reset_msg();" />Division
-                
+                  <input type="radio" class="custom-control-input" id="defaultInline4" name="math" onclick="reset_msg();" />Division
                 </div>
                 <br>
                 <div class="container-fluid">
@@ -306,7 +282,7 @@
     <div id="msg"></div>
     </form>
     <div class="container-fluid">
-    <h3>
+    <h3 id="login">
     	Click the button to create a dynamic table using data extracted from a JSON array.
     </h3>
     
@@ -323,6 +299,7 @@
             value='Show details of Employee' />   
             <p id='showData1'></p>            
     </div>
+    
     </body>
     </html>
 		
